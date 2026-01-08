@@ -6,35 +6,57 @@
     <title>Моя перша сторінка</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="light-theme">
 
 <header>
     <h1>Вітаю у світі WWW!</h1>
+    <button id="themeToggle">Змінити тему</button>
 </header>
 
 <main>
+
+    <!-- Реактивне вітання -->
     <section>
-        <p>Це мій перший абзац тексту.</p>
-        <p>Цей сайт створено в рамках лабораторної роботи.</p>
+        <h2>Персональне привітання</h2>
+        <input type="text" id="nameInput" placeholder="Введіть ім’я">
+        <p id="greeting"></p>
     </section>
 
+    <!-- Динамічне додавання елементів -->
     <section>
-        <h2>Список можливостей</h2>
-        <ul>
-            <li>HTML структура</li>
-            <li>CSS стилізація</li>
-            <li>Адаптивний дизайн</li>
-        </ul>
+        <h2>Коментарі</h2>
+
+        <form id="commentForm">
+            <input type="text" id="commentName" placeholder="Ваше ім’я" required>
+            <input type="text" id="commentText" placeholder="Коментар" required>
+            <button type="submit">Додати</button>
+        </form>
+
+        <div id="commentList"></div>
     </section>
 
+    <!-- Динамічне завантаження HTML -->
     <section>
-        <a href="https://example.com" target="_blank">Перейти на приклад сайту</a>
+        <h2>Динамічний контент</h2>
+        <button id="loadHtml">Завантажити дані</button>
+        <div id="htmlContainer"></div>
     </section>
+
+    <!-- Динамічне завантаження JSON -->
+    <section>
+        <h2>Завантаження JSON</h2>
+        <button id="loadJson">Завантажити JSON</button>
+        <div id="jsonContainer"></div>
+    </section>
+
 </main>
 
 <footer>
     <p>© 2026 Навчальний проєкт</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
+
